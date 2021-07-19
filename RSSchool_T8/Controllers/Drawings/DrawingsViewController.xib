@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawingsViewController" customModule="RSSchool_T8" customModuleProvider="target">
+            <connections>
+                <outlet property="headButton" destination="rQ3-2I-guD" id="V5H-iU-GPa"/>
+                <outlet property="landscapeButton" destination="Ifl-il-eGi" id="gbQ-1h-zs0"/>
+                <outlet property="planetButton" destination="Ioi-ZA-e9r" id="CQ5-fO-SG3"/>
+                <outlet property="treeButton" destination="8MN-0b-Ny6" id="OFF-A7-Lzk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Q7u-cx-9La">
+                    <rect key="frame" x="97" y="112" width="200" height="205"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioi-ZA-e9r" customClass="ArtistButton">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="eXq-Nq-HBk"/>
+                                <constraint firstAttribute="height" constant="40" id="nFM-D2-aw3"/>
+                            </constraints>
+                            <state key="normal" title="Planet"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ3-2I-guD" customClass="ArtistButton">
+                            <rect key="frame" x="0.0" y="55" width="200" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="WAW-n2-hE9"/>
+                                <constraint firstAttribute="width" constant="200" id="h5o-CA-DsI"/>
+                            </constraints>
+                            <state key="normal" title="Head"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MN-0b-Ny6" customClass="ArtistButton">
+                            <rect key="frame" x="0.0" y="110" width="200" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="2Fm-XC-K6K"/>
+                                <constraint firstAttribute="height" constant="40" id="dRu-KW-57y"/>
+                            </constraints>
+                            <state key="normal" title="Tree"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifl-il-eGi" customClass="ArtistButton">
+                            <rect key="frame" x="0.0" y="165" width="200" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="Fai-Td-dub"/>
+                                <constraint firstAttribute="height" constant="40" id="bQ7-c5-JbM"/>
+                            </constraints>
+                            <state key="normal" title="Landscape"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Q7u-cx-9La" secondAttribute="bottom" constant="350" id="AXs-VN-r6Q"/>
+                <constraint firstItem="Q7u-cx-9La" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="Fqi-B1-ddr"/>
+                <constraint firstItem="Q7u-cx-9La" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="97" id="yIv-KW-zGf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="107"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

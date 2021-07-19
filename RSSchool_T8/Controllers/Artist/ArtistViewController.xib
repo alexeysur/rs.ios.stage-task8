@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistViewController">
+            <connections>
+                <outlet property="canvas" destination="D0M-3f-nh3" id="uFj-4a-LCr"/>
+                <outlet property="drawButton" destination="SkL-su-Pto" id="gJs-SR-B3E"/>
+                <outlet property="openPaletteButton" destination="tKN-Jt-Wni" id="aCs-gr-NrJ"/>
+                <outlet property="openTimerButton" destination="YfF-q9-pWG" id="3Xd-PQ-O3y"/>
+                <outlet property="shareButton" destination="BGg-5a-8aA" id="9J2-AV-RIA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="arrayButtons" destination="tKN-Jt-Wni" id="Cpw-pr-gUv"/>
+                <outletCollection property="arrayButtons" destination="SkL-su-Pto" id="pDD-pi-GGl"/>
+                <outletCollection property="arrayButtons" destination="YfF-q9-pWG" id="TqV-1W-XZP"/>
+                <outletCollection property="arrayButtons" destination="BGg-5a-8aA" id="jNV-Hh-ffi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKN-Jt-Wni" customClass="ArtistButton">
+                    <rect key="frame" x="20" y="454" width="163" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="EGg-nW-FDB"/>
+                        <constraint firstAttribute="height" constant="32" id="EcJ-LM-RYM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="Open Palette"/>
+                    <connections>
+                        <action selector="openPaletteButtonTapped:" destination="-1" eventType="touchUpInside" id="8P6-ys-scX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkL-su-Pto" customClass="ArtistButton">
+                    <rect key="frame" x="243" y="454" width="91" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="91" id="Q4J-YV-TrY"/>
+                        <constraint firstAttribute="height" constant="32" id="sgd-Tv-WQp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="Draw"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfF-q9-pWG" customClass="ArtistButton">
+                    <rect key="frame" x="20" y="506" width="163" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="163" id="bqD-YK-y58"/>
+                        <constraint firstAttribute="height" constant="32" id="oHa-93-dWc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="Open Timer"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGg-5a-8aA" customClass="ArtistButton">
+                    <rect key="frame" x="239" y="506" width="95" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="Bga-w5-FSc"/>
+                        <constraint firstAttribute="height" constant="32" id="XtZ-PY-Wmd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="Share"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0M-3f-nh3" customClass="CanvasView">
+                    <rect key="frame" x="37" y="104" width="300" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="F4z-0l-jpF"/>
+                        <constraint firstAttribute="width" constant="300" id="orv-P5-SDg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SkL-su-Pto" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="243" id="2LN-XQ-fAW"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="YfF-q9-pWG" secondAttribute="bottom" constant="129" id="2oK-eF-OSI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="tKN-Jt-Wni" secondAttribute="bottom" constant="181" id="32e-ZZ-sQF"/>
+                <constraint firstItem="tKN-Jt-Wni" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="EKY-6q-jeH"/>
+                <constraint firstItem="D0M-3f-nh3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="104" id="MFW-lT-bsn"/>
+                <constraint firstItem="YfF-q9-pWG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="Oka-ie-tTS"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BGg-5a-8aA" secondAttribute="trailing" constant="41" id="SHh-l6-3Bv"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="D0M-3f-nh3" secondAttribute="trailing" constant="38" id="VEa-g6-9OG"/>
+                <constraint firstItem="tKN-Jt-Wni" firstAttribute="top" secondItem="D0M-3f-nh3" secondAttribute="bottom" constant="50" id="XSP-aW-kBm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="SkL-su-Pto" secondAttribute="bottom" constant="181" id="iyH-5N-gz9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="BGg-5a-8aA" secondAttribute="bottom" constant="129" id="jho-4L-cM5"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="SkL-su-Pto" secondAttribute="trailing" constant="41" id="onU-1Q-VxH"/>
+                <constraint firstItem="tKN-Jt-Wni" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="psz-hC-tse"/>
+                <constraint firstItem="D0M-3f-nh3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="37" id="vQz-sh-hc6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.600000000000001" y="103.89805097451276"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
