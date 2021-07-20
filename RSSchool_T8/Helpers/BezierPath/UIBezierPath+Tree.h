@@ -9,12 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIBezierPathTree : NSObject 
+@interface UIBezierPathTree : NSObject
 @property(strong, nonatomic) UIColor *strokeColor;
 @property(strong, nonatomic) UIColor *fillColor;
 @property(strong, nonatomic) UIColor *fillColor2;
 
--(UIBezierPath*)drawTree;
+-(UIBezierPath*) drawTree;
 -(void)setupColors;
 
 @end

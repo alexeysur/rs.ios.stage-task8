@@ -6,11 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSSchool_T8-Swift.h"
+#import "UIBezierPath+Tree.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
--(void)setupCanvas;
+@property (readwrite, nonatomic) DrawingShape drawingShape;
+@property (readwrite, nonatomic) UIBezierPathTree *bezierPathTree;
+
+-(void)setupStyle;
+-(void)drawingShape:(DrawingShape)shape;
+
 @end
 
 NS_ASSUME_NONNULL_END

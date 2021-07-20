@@ -6,24 +6,49 @@
 //
 
 import UIKit
-enum DrawingCase: Int {
-    case Tree
-    case Head
-    case Landscape
-    case Planet
-}
-
 
 class DrawingsViewController: UIViewController {
-    @IBOutlet weak var planetButton: ArtistButton!
-    @IBOutlet weak var headButton: ArtistButton!
-    @IBOutlet weak var treeButton: ArtistButton!
-    @IBOutlet weak var landscapeButton: ArtistButton!
+    @IBOutlet var arrayButtons : [ArtistButton]!
+    @objc public var drawingShape: DrawingShape = .Tree
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        treeButton.isSelected = true
+        for but in arrayButtons {
+            if but.titleLabel?.text == "Tree" {
+                but.layer.shadowRadius = 4
+                but.layer.shadowColor = UIColor.init(named: "LightGreenSea")?.cgColor
+            }
+        }
     }
 
-
+    @IBAction func planetButtonTapped(_ sender: ArtistButton) {
+        drawingShape = .Planet
+        touchButton(sender: sender)
+    }
+ 
+    @IBAction func headButtonTapped(_ sender: ArtistButton) {
+        drawingShape = .Head
+        touchButton(sender: sender)
+    }
+    @IBAction func treeButtonTapped(_ sender: ArtistButton) {
+        drawingShape = .Tree
+        touchButton(sender: sender)
+    }
+    @IBAction func landscapeButtonTapped(_ sender: ArtistButton) {
+        drawingShape = .Landscape
+        touchButton(sender: sender)
+    }
+    
+    func touchButton(sender: ArtistButton)  {
+        for button in arrayButtons {
+            if (button == sender) {
+                button.layer.shadowRadius = 4
+                button.layer.shadowColor = UIColor.init(named: "LightGreenSea")?.cgColor
+            } else {
+                button.layer.shadowRadius = 2
+                button.layer.shadowColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            }
+        }
+    }
 }

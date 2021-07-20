@@ -23,6 +23,7 @@
 		8A73737626A4DD4600EC2687 /* paintLandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73737526A4DD4600EC2687 /* paintLandscape.m */; };
 		8A73737826A4DDF600EC2687 /* paintTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73737726A4DDF600EC2687 /* paintTree.m */; };
 		8A73737C26A4DE6300EC2687 /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A73737B26A4DE6300EC2687 /* PaletteButton.m */; };
+		8A86987526A754BF00FBEA1D /* DrawingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A86987426A754BF00FBEA1D /* DrawingShape.swift */; };
 		8A89F71B26A5B02A00D855FC /* UIBezierPath+Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A89F71A26A5B02A00D855FC /* UIBezierPath+Tree.m */; };
 		8A89F71F26A5BB5E00D855FC /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A89F71E26A5BB5E00D855FC /* CanvasView.m */; };
 		8A89F72526A6194900D855FC /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A89F72326A6194900D855FC /* Montserrat-Regular.ttf */; };
@@ -54,6 +55,7 @@
 		8A73737726A4DDF600EC2687 /* paintTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = paintTree.m; sourceTree = "<group>"; };
 		8A73737A26A4DE6300EC2687 /* PaletteButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteButton.h; sourceTree = "<group>"; };
 		8A73737B26A4DE6300EC2687 /* PaletteButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteButton.m; sourceTree = "<group>"; };
+		8A86987426A754BF00FBEA1D /* DrawingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingShape.swift; sourceTree = "<group>"; };
 		8A89F71926A5B02A00D855FC /* UIBezierPath+Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Tree.h"; sourceTree = "<group>"; };
 		8A89F71A26A5B02A00D855FC /* UIBezierPath+Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Tree.m"; sourceTree = "<group>"; };
 		8A89F71D26A5BB5E00D855FC /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				8A89F72026A5C88400D855FC /* SVG */,
 				8A89F71826A5AFED00D855FC /* BezierPath */,
+				8A86987426A754BF00FBEA1D /* DrawingShape.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				8A73737C26A4DE6300EC2687 /* PaletteButton.m in Sources */,
 				8A73733326A1DE4E00EC2687 /* AppDelegate.m in Sources */,
 				8A89F71B26A5B02A00D855FC /* UIBezierPath+Tree.m in Sources */,
+				8A86987526A754BF00FBEA1D /* DrawingShape.swift in Sources */,
 				8A89F71F26A5BB5E00D855FC /* CanvasView.m in Sources */,
 				8A73737626A4DD4600EC2687 /* paintLandscape.m in Sources */,
 				8A73736F26A4CB1600EC2687 /* PaletteViewController.m in Sources */,

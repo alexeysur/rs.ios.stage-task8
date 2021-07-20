@@ -6,17 +6,10 @@
 //
 
 #import "CanvasView.h"
-#import "UIBezierPath+Tree.h"
-
 
 @implementation CanvasView
 
-- (void)drawRect:(CGRect)rect {
- //   UIBezierPath *path = [UIBezierPathTree drawTree];
-    
-}
-
--(void)awakeFromNib {
+-(void)setupStyle {
     [super awakeFromNib];
         self.layer.cornerRadius = 8.0;
         self.layer.shadowColor = [UIColor colorWithRed: 0.0 green:0.7 blue:1.0 alpha:0.25].CGColor;
@@ -25,7 +18,23 @@
         self.layer.shadowOpacity = 1.0;
 }
 
--(void)setupCanvas {
+-(void)drawingShape:(DrawingShape)shape {
+    CAShapeLayer *layer;
+    
+    switch (shape) {
+        case DrawingShapeTree:
+            layer.path = [_bezierPathTree drawTree].CGPath;
+            break;
+         
+        case DrawingShapeHead:
+            //
+            break;
+        case DrawingShapePlanet:
+            break;
+        case DrawingShapeLandscape:
+            break;
+      
+    }
 }
 
 @end

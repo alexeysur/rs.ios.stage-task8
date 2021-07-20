@@ -28,6 +28,7 @@
  
     [self setupNavigationBar];
     [self setupStateButtons];
+    [self.canvas setupStyle];
 }
 
 -(void) setupNavigationBar {
@@ -79,6 +80,9 @@
     [self.navigationController pushViewController: self.drawingVC animated:YES];
 }
 
+- (IBAction)drawButtonTapped:(ArtistButton *)sender {
+    [self.canvas drawingShape:(DrawingShapeTree)];
+}
 
  
 
